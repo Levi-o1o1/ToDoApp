@@ -1,52 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <!-- Responsive support -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Advanced To-Do App</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<div class="todo-container">
-
-    <!-- SETTINGS BUTTON (TOP LEFT) -->
-    <div class="settings">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="todo-container">
+      <!-- SETTINGS BUTTON (TOP LEFT) -->
+      <div class="settings">
         <button id="settingsBtn">⚙</button>
 
         <div id="settingsMenu">
-            <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+          <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
         </div>
-    </div>
+      </div>
 
-    <h1>📝 To-Do List</h1>
+      <h1>📝 To-Do List</h1>
 
-    <!-- INPUT -->
-    <div class="input-box">
-        <input type="text" id="taskInput" placeholder="Enter a task">
+      <!-- INPUT -->
+      <div class="input-box">
+        <input type="text" id="taskInput" placeholder="Enter a task" />
         <button onclick="addTask()">Add</button>
+      </div>
+
+      <!-- TASK LIST -->
+      <ul id="taskList"></ul>
+
+      <!-- DELETE SELECTED (HIDDEN BY DEFAULT) -->
+      <button id="doneSelectedBtn" onclick="markSelectedDone()">✅ Done</button>
+      <button id="undoSelectedBtn" onclick="undoSelectedDone()">↩ Undo</button>
+      <button id="deleteSelectedBtn" onclick="deleteSelectedTasks()">
+        🗑 Delete Selected
+      </button>
+
+      <!-- CLEAR ALL -->
+      <button class="clear-all" onclick="clearAllTasks()">Clear All</button>
     </div>
 
-    <!-- TASK LIST -->
-    <ul id="taskList"></ul>
-
-    <!-- DELETE SELECTED (HIDDEN BY DEFAULT) -->
-     <button id="doneSelectedBtn" onclick="markSelectedDone()">
-         ✅ Done
-    </button>
-    <button id="undoSelectedBtn" onclick="undoSelectedDone()">
-    ↩ Undo
-    </button>
-     <button id="deleteSelectedBtn" onclick="deleteSelectedTasks()">
-        🗑 Delete Selected
-    </button>
-
-    <!-- CLEAR ALL -->
-    <button class="clear-all" onclick="clearAllTasks()">Clear All</button>
-
-</div>
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
